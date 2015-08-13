@@ -47,6 +47,9 @@ template "#{node["statsd"]["conf_dir"]}/config.js" do
     :prefix_timer       => node["statsd"]["graphite"]["prefix_timer"],
     :prefix_gauge       => node["statsd"]["graphite"]["prefix_gauge"],
     :prefix_set         => node["statsd"]["graphite"]["prefix_set"],
+    :librato_mail       => node["statsd"]["librato"]["email"],
+    :librato_token      => node["statsd"]["librato"]["token"],
+    :librato_source     => node["statsd"]["librato"]["source"],
     :debug              => node["statsd"]["debug"],
     :dump_messages      => node["statsd"]["dump_messages"]
   )
