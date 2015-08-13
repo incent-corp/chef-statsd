@@ -30,5 +30,9 @@ default["statsd"]["graphite"]["prefix_timer"]     = "timers"
 default["statsd"]["graphite"]["prefix_gauge"]     = "gauges"
 default["statsd"]["graphite"]["prefix_set"]       = "sets"
 
+default["statsd"]["librato"]["email"]             = ""
+default["statsd"]["librato"]["token"]             = ""
+default["statsd"]["librato"]["source"]            = ""
+
 # nodejs
 default["statsd"]["nodejs_bin"] = "#{node["nodejs"]["dir"]}/bin/node"
