@@ -3,6 +3,7 @@
   "graphiteHost": "<%= @graphite_host %>",
   "address": "<%= @address %>",
   "port": <%= @port %>,
+  "backends": ["statsd-librato-backend"],
   "mgmt_address": "<%= @mgmt_address %>",
   "mgmt_port": <%= @mgmt_port %>,
   "flushInterval": <%= @flush_interval %>,
@@ -25,6 +26,11 @@
     "prefixGauge": "<%= @prefix_gauge %>",
     "prefixSet": "<%= @prefix_set %>"
   },
+  "librato": {
+    "email":  "<%= @librato_mail %>",
+    "token":  "<%= @librato_token %>",
+    "source": "<%= @librato_source %>"
+  }
   "debug": <%= @debug %>,
   "dumpMessages": <%= @dump_messages %>
 }
