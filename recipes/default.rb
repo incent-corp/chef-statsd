@@ -9,6 +9,18 @@ git node["statsd"]["dir"] do
   notifies :restart, "service[statsd]", :delayed
 end
 
+link "/usr/local/bin/node" do
+  to "/usr/bin/node"
+end
+
+link "/usr/local/lib/node_modules" do
+  to "/usr/lib/node_modules"
+end
+
+nodejs_npm "statsd-librato-backend" do
+  path node["statsd"]["dir"]
+end
+
 directory node["statsd"]["conf_dir"] do
   action :create
 end
